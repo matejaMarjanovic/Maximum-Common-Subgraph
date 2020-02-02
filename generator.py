@@ -6,14 +6,14 @@ branches2 = [(a, b) for a in range(n) for b in range(n) if a < b and random.rand
 vertices1 = {}
 vertices2 = {}
 for i in range(n):
-	vertices1['x' + str(i)] = []
-	vertices2['y' + str(i)] = []
+	vertices1[str(i)] = []
+	vertices2[str(i)] = []
 
 for (a, b) in branches1:
-	vertices1['x' + str(a)].append(str(b))
+	vertices1[str(a)].append(str(b))
 
 for (a, b) in branches2:
-	vertices2['y' + str(a)].append(str(b))
+	vertices2[str(a)].append(str(b))
 
 for i in range(15, 25):
 	f1 = open("tests/input1_" + str(i) + ".json" ,"w+")
